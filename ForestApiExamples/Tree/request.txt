@@ -1,0 +1,12 @@
+GET /api/v1/plants?seekrua=extension_firefox-5.1.0&from_date=2021-12-24T10:30:49.181Z HTTP/2
+Host: c88fef96.forestapp.cc
+Cookie: remember_token=<token>
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,cs;q=0.8,sk;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+

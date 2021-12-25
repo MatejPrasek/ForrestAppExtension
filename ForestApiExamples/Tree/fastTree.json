@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1000023749,
+        "tag": 6,
+        "note": "",
+        "is_success": true,
+        "start_time": "2021-12-25T20:21:36.002Z",
+        "end_time": "2021-12-25T20:31:36.002Z",
+        "created_at": "2021-12-25T20:34:46.486Z",
+        "updated_at": "2021-12-25T20:34:46.486Z",
+        "user_id": 7048602,
+        "has_left": false,
+        "deleted": false,
+        "theme": 0,
+        "cheating": false,
+        "room_id": null,
+        "tree_type_gid": 6,
+        "tree_count": 1,
+        "mode": "countdown",
+        "trees": [
+            {
+                "created_at": "2021-12-25T20:34:46.486Z",
+                "updated_at": "2021-12-25T20:34:46.486Z",
+                "tree_type": 6,
+                "is_dead": false,
+                "phase": 4
+            }
+        ]
+    }
+]
