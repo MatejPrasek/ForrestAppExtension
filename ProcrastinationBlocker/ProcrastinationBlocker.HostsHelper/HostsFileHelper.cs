@@ -21,7 +21,7 @@
 
         public void Remove(string hostname)
         {
-            var toRemove = Entries.Where(entry => entry.HostNames != null && entry.HostNames.Contains(hostname));
+            var toRemove = Entries.Where(entry => entry.HostNames != null && entry.HostNames.Contains(hostname)).ToList();
             foreach (var hostsFileEntry in toRemove)
             {
                 if (hostsFileEntry.HostNames == null)
