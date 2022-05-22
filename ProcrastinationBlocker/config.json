@@ -1,0 +1,10 @@
+{
+    "blocked-hosts": [
+        "youtube.com",
+        "facebook.com"
+    ],
+    "cookie": "cookie",
+    "wait-time-minutes": 15,
+    "redirect-to": "127.0.0.1",
+    "hours-required": 3
+}

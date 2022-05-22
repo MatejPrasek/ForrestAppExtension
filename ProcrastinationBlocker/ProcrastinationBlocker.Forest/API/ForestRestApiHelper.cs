@@ -8,19 +8,17 @@ namespace ProcrastinationBlocker.Forest.API
     public class ForestRestApiHelper
     {
         private string Token { get; }
-        private ILogger Logger { get; }
         private IHttpClient HttpClient { get; }
 
         private const string ForestUrl = "https://c88fef96.forestapp.cc";
 
-        internal ForestRestApiHelper(string token, ILogger logger, IHttpClient httpClient)
+        internal ForestRestApiHelper(string token, IHttpClient httpClient)
         {
             Token = token;
-            Logger = logger;
             HttpClient = httpClient;
         }
 
-        public ForestRestApiHelper(string token, ILogger logger) : this(token, logger, new HttpClientWrapper())
+        public ForestRestApiHelper(string token) : this(token, new HttpClientWrapper())
         {
                 
         }
@@ -30,19 +28,9 @@ namespace ProcrastinationBlocker.Forest.API
             var query = $"from_date={startTime:O}";
             var uri = new Uri($"{ForestUrl}/api/v1/plants{(string.IsNullOrEmpty(query) ? string.Empty : "?" + query)}");
             var message = GetRequestMessage(HttpMethod.Get, uri);
-            HttpResponseMessage response;
-            try
-            {
-                response = HttpClient.Send(message);
-            }
-            catch (Exception e)
-            {
-                Logger.LogError(e, "Unable to retrieve plants info due to network issue.");
-                throw;
-            }
+            var response = HttpClient.Send(message);
             if (!response.IsSuccessStatusCode)
             {
-                Logger.LogError("Unable to retrieve plants info. Response does not indicate success.");
                 throw new HttpRequestException("Unable to retrieve plants info. Response does not indicate success.", null, response.StatusCode);
             }
 

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -19,6 +19,7 @@
     <ProjectReference Include="..\ProcrastinationBlocker.Common\ProcrastinationBlocker.Common.csproj" />
     <ProjectReference Include="..\ProcrastinationBlocker.Forest\ProcrastinationBlocker.Forest.csproj" />
     <ProjectReference Include="..\ProcrastinationBlocker.HostsHelper\ProcrastinationBlocker.HostsHelper.csproj" />
+    <ProjectReference Include="..\ProcrastinationBlocker.Service\ProcrastinationBlocker.Service.csproj" />
   </ItemGroup>
 
 </Project>
